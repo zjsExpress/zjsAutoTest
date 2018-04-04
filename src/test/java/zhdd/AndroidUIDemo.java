@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import zhdd.utils.android.AdbDrivers;
+import zhdd.utils.ui.android.AdbDrivers;
 
 public class AndroidUIDemo {
 	public static void main(String[] args) {

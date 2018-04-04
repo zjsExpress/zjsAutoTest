@@ -1,4 +1,4 @@
-package zhdd.utils.android;
+package zhdd.utils.ui.android;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
