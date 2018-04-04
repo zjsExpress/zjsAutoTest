@@ -12,45 +12,30 @@ import io.appium.java_client.ios.IOSElement;
 
 public class HighLightElement {
 	/**
-	 * 浏览器元素高亮
-	 * @param driver
-	 * @param element
-	 */
-	public static void setElementStyle(WebDriver driver, WebElement element){
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
-	}
-	/**
 	 * 安卓元素高亮
+	 * 
+	 * @param type
+	 *            传递字符串 android or web or ios
 	 * @param driver
 	 * @param element
 	 */
-	public void setElementStyle(AndroidDriver<AndroidElement> driver, AndroidElement element){
-		//TODO 设置android元素高亮
-		
-	}
-	/**
-	 * 安卓元素高亮
-	 * @param driver
-	 * @param element
-	 */
-	public void setElementStyle(AppiumDriver<AndroidElement> driver, AndroidElement element){
-		//TODO 设置android元素高亮
-	}
-	/**
-	 * IOS元素高亮
-	 * @param driver
-	 * @param element
-	 */
-	public void setElementStyle(AppiumDriver<IOSElement> driver, IOSElement element){
-		//TODO 设置 ios 元素高亮
-	}
-	/**
-	 * IOS元素高亮
-	 * @param driver
-	 * @param element
-	 */
-	public void setElementStyle(IOSDriver<IOSElement> driver, IOSElement element){
-		//TODO 设置 ios 元素高亮
+	public static void setElementStyle(String type, Object driver, Object element) {
+		switch (type) {
+		case "android":
+
+			break;
+		case "web":
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",
+					(WebElement) element);
+			break;
+		case "ios":
+
+			break;
+
+		default:
+			break;
+		}
+
 	}
 }

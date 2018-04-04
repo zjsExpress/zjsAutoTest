@@ -20,7 +20,7 @@ public class ScreenshotDemo {
 		driver.get("http://www.baidu.com");
 		Thread.sleep(3000);
 		WebElement element = driver.findElement(By.id("kw"));
-		HighLightElement.setElementStyle(driver, element);
+		HighLightElement.setElementStyle("web", driver, element);
 		Thread.sleep(2000);
 		s.saveScreenshot(driver, "webdriver_method");
 		Thread.sleep(1000);
