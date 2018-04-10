@@ -5,8 +5,13 @@ import java.util.Map;
 
 import org.openqa.selenium.By;
 
+import com.holmos.webtest.element.TextField;
+import com.holmos.webtest.utils.HolmosWindow;
+
 import zhdd.common.Driver;
 import zhdd.utils.files.PropertiesAnalysis;
+import zhdd.utils.ui.HighLightElement;
+import zhdd.utils.ui.web.ChromeBrowse;
 
 public class Demo {
 	public static void main(String[] args) throws InterruptedException {
@@ -17,17 +22,28 @@ public class Demo {
 		new Demo().de(map);*/
 		/*String path = System.getProperty("user.dir") + "\\log4j.properties"; 
 		System.out.println(PropertiesAnalysis.getValue(path, "log4j.appender.stdout"));*/
-		System.out.println("app".equalsIgnoreCase("APP"));
+		/*System.out.println("app".equalsIgnoreCase("APP"));
 		System.out.println("app".equals("APP"));
-		System.out.println("w".toUpperCase());
+		System.out.println("w".toUpperCase());*/
 		/*Driver.startDriver("web", "chrome");
 		Driver.webDriver.get("http://www.baidu.com");
 		Driver.webDriver.findElement(By.id("kw")).sendKeys("abc");
 		Thread.sleep(5000);
 		Driver.webDriver.close();*/
-		Driver.startDriver("app", "android");
+		/*Driver.startDriver("app", "android");
 		Thread.sleep(10000);
-		Driver.appDriver.close();
+		Driver.appDriver.close();*/
+		ChromeBrowse setUp = new ChromeBrowse();
+		setUp.ChromeDriverSetup();
+		//username.setText("ddddd");
+		Thread.sleep(5000);
+		HighLightElement.setElementStyle("web", "", username);
+		setUp.ChromeDriverClosed();
+		
+	}
+	public static TextField username = new TextField("宣传页→管理后台登录页→用户名文本框");{
+		
+		username.addIDLocator("kw");
 	}
 	public void de(Map<String, String> map){
 		for(String key : map.keySet()){

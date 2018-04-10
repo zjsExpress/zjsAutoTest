@@ -7,7 +7,7 @@ import zhdd.common.Driver;
 
 public class HighLightElement {
 	/**
-	 * 安卓元素高亮
+	 * 通用元素高亮
 	 * 
 	 * @param type
 	 *            传递字符串 android or web or ios

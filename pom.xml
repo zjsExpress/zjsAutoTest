@@ -82,5 +82,11 @@
 		<artifactId>dom4j</artifactId>
 		<version>1.6.1</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.holmos/holmos-webtest -->
+	<dependency>
+    <groupId>com.holmos</groupId>
+    <artifactId>holmos-webtest</artifactId>
+    <version>1.0.2u10</version>
+	</dependency>
   </dependencies>
 </project>
