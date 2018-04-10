@@ -10,7 +10,7 @@ import com.holmos.webtest.utils.HolmosWindow;
 
 import zhdd.common.Driver;
 import zhdd.utils.files.PropertiesAnalysis;
-import zhdd.utils.ui.HighLightElement;
+import zhdd.utils.ui.HighLightElements;
 import zhdd.utils.ui.web.ChromeBrowse;
 
 public class Demo {
@@ -37,7 +37,7 @@ public class Demo {
 		setUp.ChromeDriverSetup();
 		//username.setText("ddddd");
 		Thread.sleep(5000);
-		HighLightElement.setElementStyle("web",username);
+		HighLightElements.setElementStyle("web",username);
 		setUp.ChromeDriverClosed();
 		
 	}

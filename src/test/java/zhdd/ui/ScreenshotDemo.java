@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import zhdd.common.Driver;
 import zhdd.utils.files.Screenshot;
-import zhdd.utils.ui.HighLightElement;
+import zhdd.utils.ui.HighLightElements;
 
 public class ScreenshotDemo {
 
@@ -18,7 +18,7 @@ public class ScreenshotDemo {
 		Driver.webDriver.get("http://www.baidu.com");
 		Thread.sleep(3000);
 		WebElement element = Driver.webDriver.findElement(By.id("kw"));
-		HighLightElement.setElementStyle("web", element);
+		HighLightElements.setElementStyle("web", element);
 		Thread.sleep(2000);
 		Screenshot.saveScreenshot("webdriver_method");
 		Thread.sleep(1000);

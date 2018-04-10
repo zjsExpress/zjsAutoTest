@@ -21,6 +21,7 @@ public class ChromeBrowse {
 		String url="http://www.baidu.com";
 		
 		HolmosWindow.openNewWindow(EngineType.WebDriverChrome, url);
+		//HolmosWindow.getDriver();
 		
 		
 	}
