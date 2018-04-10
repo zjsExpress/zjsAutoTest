@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import com.holmos.webtest.SeleniumDriver;
 import com.holmos.webtest.exceptions.HolmosFailedError;
 
 import io.appium.java_client.AppiumDriver;
@@ -17,6 +18,7 @@ import io.appium.java_client.android.AndroidElement;
 public class Driver {
 	public static WebDriver webDriver = null;
 	public static AppiumDriver<WebElement> appDriver = null;
+	public static SeleniumDriver selDriver = null;
 	/**
 	 * 
 	 * @param userOS android, web, ios

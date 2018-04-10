@@ -1,13 +1,11 @@
 package zhdd.ui;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import zhdd.common.Driver;
 import zhdd.utils.files.Screenshot;
-import zhdd.utils.ui.HighLightElements;
+import zhdd.utils.ui.HighLightElement;
 
 public class ScreenshotDemo {
 
@@ -18,7 +16,7 @@ public class ScreenshotDemo {
 		Driver.webDriver.get("http://www.baidu.com");
 		Thread.sleep(3000);
 		WebElement element = Driver.webDriver.findElement(By.id("kw"));
-		HighLightElements.setElementStyle("web", element);
+		HighLightElement.setElementStyle("web", element);
 		Thread.sleep(2000);
 		Screenshot.saveScreenshot("webdriver_method");
 		Thread.sleep(1000);
