@@ -1,0 +1,17 @@
+<project name='auto-test-utils' basedir='.'>
+	<property name='lib.dir' value='libs' />
+	<path id='test.classpath'>
+		<fileset dir='${lib.dir}' includes='*.jar'></fileset>
+	</path>
+	<target name="transform">
+		<property name='dir' value=''></property>
+		<mkdir dir="E:/test-output/"/>
+		<xslt in="E:/project/terminal/auto-test-utils/test-output/testng-results.xml"
+			style="E:/project/terminal/auto-test-utils/src/main/resources/testng-results.xsl"
+			out="E:/project/terminal/auto-test-utils/test-output/test-output/index1.html">
+			<classpath ref="test.classpath"/>
+			<!--processor="SaxonLiaison"-->
+			<param name="testNGXslt.outputDir" expression="E:/project/terminal/auto-test-utils/test-output"/>
+		</xslt>
+	</target>
+</project>
