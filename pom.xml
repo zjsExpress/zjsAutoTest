@@ -88,5 +88,12 @@
     <artifactId>holmos-webtest</artifactId>
     <version>1.0.2u10</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.squareup.okio/okio -->
+	<dependency>
+    <groupId>com.squareup.okio</groupId>
+    <artifactId>okio</artifactId>
+    <version>1.13.0</version>
+	</dependency>
+	
   </dependencies>
 </project>

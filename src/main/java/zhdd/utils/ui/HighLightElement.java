@@ -4,6 +4,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.holmos.webtest.utils.HolmosWindow;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -25,7 +27,7 @@ public class HighLightElement {
 
 			break;
 		case "web":
-			JavascriptExecutor js = (JavascriptExecutor) driver;
+			JavascriptExecutor js = (JavascriptExecutor) HolmosWindow.getDriver();
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",
 					(WebElement) element);
 			break;
