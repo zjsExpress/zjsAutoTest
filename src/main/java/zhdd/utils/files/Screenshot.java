@@ -9,11 +9,13 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import zhdd.common.Driver;
+
 public class Screenshot {
-	Date date = new Date();
+	static Date date = new Date();
 
 	// 生成图片名称
-	public String savePngName(String name) {
+	public static String savePngName(String name) {
 		// name自定义图片名称
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		String day = sdf.format(date);
@@ -28,7 +30,7 @@ public class Screenshot {
 	}
 
 	// 获取当前时间
-	public String saveTime() {
+	private static String saveTime() {
 		date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		return sdf.format(date);
@@ -38,8 +40,8 @@ public class Screenshot {
 	 * @param driver
 	 * @param name
 	 */
-	public void saveScreenshot(Object driver, String name){
-		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	public static void saveScreenshot(String name){
+		File srcFile = ((TakesScreenshot) Driver.webDriver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(srcFile, new File(savePngName(name)));
 		} catch (IOException e) {

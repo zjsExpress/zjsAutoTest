@@ -1,14 +1,9 @@
 package zhdd.utils.ui;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.ios.IOSElement;
+import zhdd.common.Driver;
 
 public class HighLightElement {
 	/**
@@ -19,13 +14,13 @@ public class HighLightElement {
 	 * @param driver
 	 * @param element
 	 */
-	public static void setElementStyle(String type, Object driver, Object element) {
+	public static void setElementStyle(String type, Object element) {
 		switch (type) {
 		case "android":
 
 			break;
 		case "web":
-			JavascriptExecutor js = (JavascriptExecutor) driver;
+			JavascriptExecutor js = (JavascriptExecutor) Driver.webDriver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",
 					(WebElement) element);
 			break;
