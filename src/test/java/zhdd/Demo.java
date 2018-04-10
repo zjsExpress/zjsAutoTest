@@ -37,7 +37,7 @@ public class Demo {
 		setUp.ChromeDriverSetup();
 		//username.setText("ddddd");
 		Thread.sleep(5000);
-		HighLightElement.setElementStyle("web", "", username);
+		HighLightElement.setElementStyle("web",username);
 		setUp.ChromeDriverClosed();
 		
 	}
