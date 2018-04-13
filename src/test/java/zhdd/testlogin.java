@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.holmos.webtest.element.TextField;
 
-import zhdd.utils.ui.HighLightElements;
+import zhdd.utils.ui.HighLightElement;
 import zhdd.utils.ui.web.ChromeBrowse;
 
 public class testlogin {
@@ -15,7 +15,7 @@ public class testlogin {
 		setUp.ChromeDriverSetup();
 		//username.setText("ddddd");
 		Thread.sleep(5000);
-		HighLightElements.setElementStyle("web", "", username);
+		HighLightElement.setElementStyle("web", username);
 		setUp.ChromeDriverClosed();
 	}
 	

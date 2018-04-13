@@ -1,19 +1,13 @@
 package zhdd.utils.ui;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import zhdd.common.Driver;
-import com.holmos.webtest.utils.HolmosWindow;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.ios.IOSElement;
 
 public class HighLightElement {
+	private static Logger log = Logger.getLogger(HighLightElement.class);
 	/**
 	 * 通用元素高亮
 	 * 
@@ -32,6 +26,7 @@ public class HighLightElement {
 			//JavascriptExecutor js = (JavascriptExecutor) (WebDriver)HolmosWindow.getDriver();
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",
 					(WebElement) element);
+			log.info("web 元素背景修改成功");
 			break;
 		case "ios":
 

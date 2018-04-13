@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -13,6 +14,7 @@ import zhdd.common.Driver;
 
 public class Screenshot {
 	static Date date = new Date();
+	private static Logger log = Logger.getLogger(Screenshot.class);
 
 	// 生成图片名称
 	public static String savePngName(String name) {
@@ -44,6 +46,7 @@ public class Screenshot {
 		File srcFile = ((TakesScreenshot) Driver.webDriver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(srcFile, new File(savePngName(name)));
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -1,4 +1,4 @@
-package zhdd.mail;
+package zhdd.utils;
 
 public class SendMailDemo {
 

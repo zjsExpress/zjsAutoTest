@@ -1,4 +1,4 @@
-package zhdd.mail;
+package zhdd.utils;
 
 import java.util.Properties;
 
