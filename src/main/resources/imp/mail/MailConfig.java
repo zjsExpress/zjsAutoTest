@@ -19,11 +19,11 @@ public interface MailConfig {
 	public final static String fallback = "false";
 	//
 	//发件人账号密码
-	public final static String sendFrom = "zhangdoudou0112@sina.com";
-	public final static String sendAuth = "amigo1234";
+	public final static String sendFrom = "xxx@sina.com";
+	public final static String sendAuth = "xxx";
 	//收件人，多个收件人用逗号隔开
-	public final static String sendTo = "273982495@qq.com,412305786@qq.com";
+	public final static String sendTo = "xxx@qq.com,xxx@qq.com";
 	//抄送人，多个抄送人用逗号隔开
-	public final static String sendCc = "zhangdoudou@tian-net.com";
+	public final static String sendCc = "zxxx@tian.com";
 	public final static Date date = new Date();
 }
