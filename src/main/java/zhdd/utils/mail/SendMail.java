@@ -103,7 +103,7 @@ public class SendMail implements MailConfig {
 		log.info("设置发件人。");
 		try {
 			// 发件人地址、名称
-			InternetAddress ia = new InternetAddress(sendFrom, "张豆豆", "UTF-8");
+			InternetAddress ia = new InternetAddress(sendFrom, "Tester", "UTF-8");
 			mimeMsg.setFrom(ia);
 			log.info("成功设置发件人");
 			return true;
